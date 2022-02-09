@@ -2,10 +2,10 @@
 
 # Cherry Markdown Editor (commumity version)
 Some feature, the official could't support right now, so it came up here for convenience access
-## additional feature list
-* plantuml [issue]](https://github.com/Tencent/cherry-markdown/issues/86) [pr](https://github.com/Tencent/cherry-markdown/pull/89)
-* chart table [issue]](https://github.com/Tencent/cherry-markdown/issues/124) [pr](https://github.com/Tencent/cherry-markdown/pull/127)
-* simple table [issue]](https://github.com/Tencent/cherry-markdown/issues/125) [pr](https://github.com/Tencent/cherry-markdown/pull/126)
+## Additional feature list
+* plantuml [original issue here](https://github.com/Tencent/cherry-markdown/issues/86) and [original pr here](https://github.com/Tencent/cherry-markdown/pull/89)
+* chart table [original issue here](https://github.com/Tencent/cherry-markdown/issues/124) and [original pr here](https://github.com/Tencent/cherry-markdown/pull/127)
+* simple table [original issue here](https://github.com/Tencent/cherry-markdown/issues/125) and [original pr here](https://github.com/Tencent/cherry-markdown/pull/126)
 
 English | [简体中文](./README.CN.md)
 
@@ -83,13 +83,13 @@ click [here](./docs/features.md) for more details
 Via yarn
 
 ```bash
-yarn add cherry-markdown
+yarn add @hanye9895/cherry-markdown
 ```
 
 Via npm
 
 ```bash
-npm install cherry-markdown --save
+npm install @hanye9895/cherry-markdown --save
 ```
 
 If you need to enable the functions of `mermaid` drawing and table-to-chart, you need to add `mermaid` and `echarts` packages at the same time.
@@ -124,7 +124,7 @@ yarn add echarts@4.6.0
 #### ESM
 
 ```javascript
-import Cherry from 'cherry-markdown';
+import Cherry from '@hanye9895/cherry-markdown';
 const cherryInstance = new Cherry({
   id: 'markdown-container',
   value: '# welcome to cherry editor!',
@@ -134,7 +134,7 @@ const cherryInstance = new Cherry({
 ### Node
 
 ```javascript
-const { default: Cherry } = require('cherry-markdown');
+const { default: Cherry } = require('@hanye9895/cherry-markdown');
 const cherryInstance = new Cherry({
   id: 'markdown-container',
   value: '# welcome to cherry editor!',
@@ -148,7 +148,7 @@ Because the size of the mermaid library is very large, the cherry build product 
 ### Full mode (With UI Interface)
 
 ```javascript
-import Cherry from 'cherry-markdown/dist/cherry-markdown.core';
+import Cherry from '@hanye9895/cherry-markdown/dist/cherry-markdown.core';
 const cherryInstance = new Cherry({
   id: 'markdown-container',
   value: '# welcome to cherry editor!',
@@ -160,7 +160,7 @@ const cherryInstance = new Cherry({
 ```javascript
 // Import Cherry engine core construction
 // Engine configuration items are the same as Cherry configuration items, the following document content only introduces the Cherry core package
-import CherryEngine from 'cherry-markdown/dist/cherry-markdown.engine.core';
+import CherryEngine from '@hanye9895/cherry-markdown/dist/cherry-markdown.engine.core';
 const cherryEngineInstance = new CherryEngine({
   value: '# welcome to cherry editor!',
 });
@@ -171,8 +171,8 @@ const cherryEngineInstance = new CherryEngine({
 The core build package does not contain mermaid dependency, should import related plug-ins manually.
 
 ```javascript
-import Cherry from 'cherry-markdown/dist/cherry-markdown.core';
-import CherryMermaidPlugin from 'cherry-markdown/dist/addons/cherry-code-block-mermaid-plugin';
+import Cherry from '@hanye9895/cherry-markdown/dist/cherry-markdown.core';
+import CherryMermaidPlugin from '@hanye9895/cherry-markdown/dist/addons/cherry-code-block-mermaid-plugin';
 import mermaid from 'mermaid';
 
 // Plug-in registration must be done before Cherry is instantiated
@@ -195,11 +195,11 @@ const cherryInstance = new Cherry({
 **recommend**  Using Dynamic import, the following is an example of webpack Dynamic import.
 
 ```javascript
-import Cherry from 'cherry-markdown/dist/cherry-markdown.core';
+import Cherry from '@hanye9895/cherry-markdown/dist/cherry-markdown.core';
 
 const registerPlugin = async () => {
   const [{ default: CherryMermaidPlugin }, mermaid] = await Promise.all([
-    import('cherry-markdown/src/addons/cherry-code-block-mermaid-plugin'),
+    import('@hanye9895/cherry-markdown/src/addons/cherry-code-block-mermaid-plugin'),
     import('mermaid'),
   ]);
   Cherry.usePlugin(CherryMermaidPlugin, {

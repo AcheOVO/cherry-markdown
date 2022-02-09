@@ -3,9 +3,9 @@
 # Cherry Markdown Editor (社区版)
 因为有些功能官方需要延期支持，急用的话，可以先用这里的版本
 ## 额外的功能列表
-* plantuml [issue]](https://github.com/Tencent/cherry-markdown/issues/86) [pr](https://github.com/Tencent/cherry-markdown/pull/89)
-* chart table, 表格图形，有折线图和饼状图 [issue]](https://github.com/Tencent/cherry-markdown/issues/124) [pr](https://github.com/Tencent/cherry-markdown/pull/127)
-* simple table, 一种比较方便的表格语法 [issue]](https://github.com/Tencent/cherry-markdown/issues/125) [pr](https://github.com/Tencent/cherry-markdown/pull/126)
+* plantuml [original issue here](https://github.com/Tencent/cherry-markdown/issues/86) and [original pr here](https://github.com/Tencent/cherry-markdown/pull/89)
+* chart table, 表格图形，有折线图和饼状图 [original issue here](https://github.com/Tencent/cherry-markdown/issues/124) and [original pr here](https://github.com/Tencent/cherry-markdown/pull/127)
+* simple table, 一种比较方便的表格语法 [original issue here](https://github.com/Tencent/cherry-markdown/issues/125) and [original pr here](https://github.com/Tencent/cherry-markdown/pull/126)
 
 ## 介绍
 
@@ -83,13 +83,13 @@ Cherry Markdown 有多种样式主题选择
 通过 yarn
 
 ```bash
-yarn add cherry-markdown
+yarn add @hanye9895/cherry-markdown
 ```
 
 通过 npm
 
 ```bash
-npm install cherry-markdown --save
+npm install @hanye9895/cherry-markdown --save
 ```
 
 如果需要开启 `mermaid` 画图、表格自动转图表功能，需要同时添加`mermaid` 与`echarts`包。
@@ -124,7 +124,7 @@ yarn add echarts@4.6.0
 #### ESM
 
 ```javascript
-import Cherry from 'cherry-markdown';
+import Cherry from '@hanye9895/cherry-markdown';
 const cherryInstance = new Cherry({
   id: 'markdown-container',
   value: '# welcome to cherry editor!',
@@ -134,7 +134,7 @@ const cherryInstance = new Cherry({
 ### Node
 
 ```javascript
-const { default: Cherry } = require('cherry-markdown');
+const { default: Cherry } = require('@hanye9895/cherry-markdown');
 const cherryInstance = new Cherry({
   id: 'markdown-container',
   value: '# welcome to cherry editor!',
@@ -148,7 +148,7 @@ const cherryInstance = new Cherry({
 ### 完整模式 (图形界面)
 
 ```javascript
-import Cherry from 'cherry-markdown/dist/cherry-markdown.core';
+import Cherry from '@hanye9895/cherry-markdown/dist/cherry-markdown.core';
 const cherryInstance = new Cherry({
   id: 'markdown-container',
   value: '# welcome to cherry editor!',
@@ -160,7 +160,7 @@ const cherryInstance = new Cherry({
 ```javascript
 // 引入Cherry引擎核心构建
 // 引擎配置项与Cherry通用，以下文档内容仅介绍Cherry核心包
-import CherryEngine from 'cherry-markdown/dist/cherry-markdown.engine.core';
+import CherryEngine from '@hanye9895/cherry-markdown/dist/cherry-markdown.engine.core';
 const cherryEngineInstance = new CherryEngine({
   value: '# welcome to cherry editor!',
 });
@@ -171,8 +171,8 @@ const cherryEngineInstance = new CherryEngine({
 核心构建包不包含 mermaid 依赖，需要手动引入相关插件。
 
 ```javascript
-import Cherry from 'cherry-markdown/dist/cherry-markdown.core';
-import CherryMermaidPlugin from 'cherry-markdown/dist/addons/cherry-code-block-mermaid-plugin';
+import Cherry from '@hanye9895/cherry-markdown/dist/cherry-markdown.core';
+import CherryMermaidPlugin from '@hanye9895/cherry-markdown/dist/addons/cherry-code-block-mermaid-plugin';
 import mermaid from 'mermaid';
 
 // 插件注册必须在Cherry实例化之前完成
@@ -195,11 +195,11 @@ const cherryInstance = new Cherry({
 **recommend** 使用异步引入，以下为 webpack 异步引入样例。
 
 ```javascript
-import Cherry from 'cherry-markdown/dist/cherry-markdown.core';
+import Cherry from '@hanye9895/cherry-markdown/dist/cherry-markdown.core';
 
 const registerPlugin = async () => {
   const [{ default: CherryMermaidPlugin }, mermaid] = await Promise.all([
-    import('cherry-markdown/src/addons/cherry-code-block-mermaid-plugin'),
+    import('@hanye9895/cherry-markdown/src/addons/cherry-code-block-mermaid-plugin'),
     import('mermaid'),
   ]);
   Cherry.usePlugin(CherryMermaidPlugin, {
