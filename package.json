@@ -1,11 +1,11 @@
 {
-  "name": "cherry-markdown",
+  "name": "@hanye9895/cherry-markdown",
   "license": "Apache-2.0",
-  "version": "0.6.5",
+  "version": "0.65.1",
   "description": "a new markdown editor",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tencent/cherry-markdown.git"
+    "url": "git+https://github.com/hanye9895/cherry-markdown.git"
   },
   "main": "./dist/cherry-markdown.min.js",
   "module": "./dist/cherry-markdown.esm.js",
@@ -52,7 +52,7 @@
   "keywords": [
     "markdown"
   ],
-  "author": "Cherry Oteam",
+  "author": "hanye9895",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/eslint-parser": "^7.12.1",

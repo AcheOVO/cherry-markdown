@@ -1,6 +1,11 @@
 <p align="center"><img src="logo/logo--color.svg" alt="cherry logo" width="50%"/></p>
 
-# Cherry Markdown Editor
+# Cherry Markdown Editor (社区版)
+因为有些功能官方需要延期支持，急用的话，可以先用这里的版本
+## 额外的功能列表
+* plantuml [issue]](https://github.com/Tencent/cherry-markdown/issues/86) [pr](https://github.com/Tencent/cherry-markdown/pull/89)
+* chart table, 表格图形，有折线图和饼状图 [issue]](https://github.com/Tencent/cherry-markdown/issues/124) [pr](https://github.com/Tencent/cherry-markdown/pull/127)
+* simple table, 一种比较方便的表格语法 [issue]](https://github.com/Tencent/cherry-markdown/issues/125) [pr](https://github.com/Tencent/cherry-markdown/pull/126)
 
 ## 介绍
 

@@ -1,6 +1,11 @@
 <p align="center"><img src="logo/logo--color.svg" alt="cherry logo" width="50%"/></p>
 
-# Cherry Markdown Editor
+# Cherry Markdown Editor (commumity version)
+Some feature, the official could't support right now, so it came up here for convenience access
+## additional feature list
+* plantuml [issue]](https://github.com/Tencent/cherry-markdown/issues/86) [pr](https://github.com/Tencent/cherry-markdown/pull/89)
+* chart table [issue]](https://github.com/Tencent/cherry-markdown/issues/124) [pr](https://github.com/Tencent/cherry-markdown/pull/127)
+* simple table [issue]](https://github.com/Tencent/cherry-markdown/issues/125) [pr](https://github.com/Tencent/cherry-markdown/pull/126)
 
 English | [简体中文](./README.CN.md)
 
